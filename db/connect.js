@@ -1,0 +1,1 @@
+const connection = "mongodb+srv://pratikuymar:<password>@cluster0.lcssvsk.mongodb.net/"
