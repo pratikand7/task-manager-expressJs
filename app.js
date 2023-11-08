@@ -15,10 +15,12 @@ const port = 3000;
 
 const start = async()=>{
     try {
-        
+        await connectDb()
+        app.listen(port, console.log(`server is running on port ${port} ...`));
     } catch (error) {
-        
+        console.log(error)
     }
 }
 
-app.listen(port, console.log(`server is running on port ${port} ...`));
+start()
+
