@@ -4,8 +4,9 @@ const getAllTask = (req,res) => {
     res.send('all items');
 }
 
-const createTask = (req,res) => {
-    res.json(req.body);
+const createTask = async (req,res) => {
+    const task = await Task.create({})
+    res.status(201).json(task);
 }
 
 const getTask = (req,res) => {
