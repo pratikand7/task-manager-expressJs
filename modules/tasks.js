@@ -1,7 +1,13 @@
 const mongoose = require("mongoose")
 
 const tastSchema = new mongoose.Schema({
-    name:String,completed:Boolean
+    name:{
+        type: String,
+        required: [true,"must provide name"],
+        trim: true,
+        maxlength: [20,'max length not greater than 20']
+    },
+    completed:Boolean
     
 })
 
