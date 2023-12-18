@@ -7,8 +7,10 @@ const tastSchema = new mongoose.Schema({
         trim: true,
         maxlength: [20,'max length not greater than 20']
     },
-    completed:Boolean
-    
+    completed:{
+        type: Boolean,
+        default: false
+    }
 })
 
 module.exports = mongoose.model('Task', tastSchema)
