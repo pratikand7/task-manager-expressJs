@@ -29,12 +29,17 @@ const getTask = async (req,res) => {
         }
     } catch (error) {
         res.status(500).json({msg:error});
-    }
-    
+    }   
 }
 
-const updateTask = (req,res) => {
-    res.send('update task');
+const updateTask = async (req,res) => {
+    try {
+        const {id:taskId} = req.params;
+
+
+    } catch (error) {
+        
+    }
 }
 
 const deleteTask = async (req,res) => {
