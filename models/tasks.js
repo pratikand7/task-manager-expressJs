@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const tastSchema = new mongoose.Schema({
+const taskSchema = new mongoose.Schema({
     name:{
         type: String,
         required: [true,"must provide name"],
@@ -13,4 +13,4 @@ const tastSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Task', tastSchema)
+module.exports = mongoose.model('Task', taskSchema)
