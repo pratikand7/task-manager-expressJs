@@ -20,8 +20,8 @@ const createTask = async (req,res) => {
 
 const getTask = async (req,res) => {
     try {
-        const {id:taskId} = req.params;
-        const task = await Task.findOne({_id:taskId});
+        const {id:taskID} = req.params;
+        const task = await Task.findOne({_id:taskID});
         res.status(201).json({task});
 
         if(!task){
@@ -34,8 +34,8 @@ const getTask = async (req,res) => {
 
 const updateTask = async (req,res) => {
     try {
-        const {id:taskId} = req.params;
-        const task = await Task.findOneAndUpdate({_id:taskId}, req.body, {
+        const {id:taskID} = req.params;
+        const task = await Task.findOneAndUpdate({_id:taskID}, req.body, {
             new : true,
             runValidators: true
         });
@@ -51,8 +51,8 @@ const updateTask = async (req,res) => {
 
 const deleteTask = async (req,res) => {
     try {
-        const {id:taskId} = req.params;
-        const task = await Task.findOneAndDelete({_id:taskId});
+        const {id:taskID} = req.params;
+        const task = await Task.findOneAndDelete({_id:taskID});
         res.status(201).json({task});
 
         if(!task){
