@@ -22,13 +22,10 @@ const showTasks = async () => {
 <h5><span><i class="far fa-check-circle"></i></span>${name}</h5>
 <div class="task-links">
 
-
-
-<!-- edit link -->
 <a href="task.html?id=${taskID}"  class="edit-link">
 <i class="fas fa-edit"></i>
 </a>
-<!-- delete btn -->
+
 <button type="button" class="delete-btn" data-id="${taskID}">
 <i class="fas fa-trash"></i>
 </button>
@@ -46,8 +43,6 @@ const showTasks = async () => {
 
 showTasks()
 
-// delete task /api/tasks/:id
-
 tasksDOM.addEventListener('click', async (e) => {
   const el = e.target
   if (el.parentElement.classList.contains('delete-btn')) {
@@ -62,8 +57,6 @@ tasksDOM.addEventListener('click', async (e) => {
   }
   loadingDOM.style.visibility = 'hidden'
 })
-
-// form
 
 formDOM.addEventListener('submit', async (e) => {
   e.preventDefault()
